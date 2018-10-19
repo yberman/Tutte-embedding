@@ -43,7 +43,7 @@ def tutte_embedding(graph, outter_face):
 	d = [0 for i in range(size)]
 	for u in remaining_vertices:
 		i = remaining_vertices.index(u)
-		neighbors = graph.neighbors(u)
+		neighbors = list(graph.neighbors(u))
 		n = len(neighbors)
 		A[i][i] = 1
 		C[i][i] = 1
