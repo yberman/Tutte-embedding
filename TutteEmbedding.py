@@ -65,8 +65,9 @@ def tutte_embedding(graph, outter_face):
     return pos
 
 
-diamond1 = np.matrix([[0,1,1,1,0],[1,0,0,0,1],[1,0,0,0,1],[1,0,0,0,1],[0,1,1,1,0]])
-G = nx.from_numpy_matrix(diamond1)
-pos = tutte_embedding(G, [(0,1), (1,4), (4,3), (3,0)])
-nx.draw_networkx(G, pos)
-plt.show()
+if __name__ == "__main__":
+    diamond1 = np.matrix([[0,1,1,1,0],[1,0,0,0,1],[1,0,0,0,1],[1,0,0,0,1],[0,1,1,1,0]])
+    G = nx.from_numpy_matrix(diamond1)
+    pos = tutte_embedding(G, [(0,1), (1,4), (4,3), (3,0)])
+    nx.draw_networkx(G, pos)
+    plt.show()
